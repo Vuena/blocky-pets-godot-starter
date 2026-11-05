@@ -37,7 +37,7 @@ func _init() -> void:
 		_check(distance < 5.0, "%s follows the player (distance %.1f m)" % [pet.species, distance])
 
 	# --- resting pets sit down after `sit_after` seconds ----------------------------
-	await _frames(420)
+	await _frames(600)  # 10 s: sit_after (5 s) plus time for a running idle_alt clip to finish
 	for pet: Pet in pets:
 		_check(pet._current_clip == "sit", "%s sits after resting (got '%s')" % [pet.species, pet._current_clip])
 
@@ -51,6 +51,17 @@ func _init() -> void:
 		_check(pet._current_clip == pet._config["happy_clip"],
 				"%s plays its happy clip (got '%s')" % [pet.species, pet._current_clip])
 	_check(main._pet_count == 3, "petting counter is 3 (got %d)" % main._pet_count)
+
+	# --- a real mouse click event, fed through the input system ---------------------
+	await _frames(120)  # let the happy clips finish
+	var cat: Pet = pets[0]
+	var click := InputEventMouseButton.new()
+	click.button_index = MOUSE_BUTTON_LEFT
+	click.pressed = true
+	click.position = camera.unproject_position(cat.global_position + Vector3.UP * 0.5)
+	Input.parse_input_event(click)
+	await _frames(2)
+	_check(main._pet_count == 4, "a left-click event pets the cat (counter %d, expected 4)" % main._pet_count)
 
 	# --- swapping through every character ------------------------------------------
 	for i in Player.CHARACTERS.size():

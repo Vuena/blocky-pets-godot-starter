@@ -6,6 +6,8 @@ A tiny third-person pet sandbox for **Godot 4**: walk a blocky character around 
 
 *(Recorded with `tools/record.sh`: that is the real game driven by a small autopilot script.)*
 
+![Screenshot: the hero cheers while the fox, cat and owl stand around, hearts above the fox](docs/screenshot.png)
+
 ## What you get
 
 - **Third-person character controller** (`CharacterBody3D`): camera-relative WASD movement, run, jump, push a snowball around, animation switching between `idle`, `walk`, `run`, `jump`, `fall`, plus `wave`, `dance` and `cheer` emotes.
