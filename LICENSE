@@ -19,7 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-This MIT licence covers the source code only (scripts/, scenes/, tools/,
-project.godot and the docs). The 3D models, animations and textures in assets/
-are separate works released under CC0 1.0 Universal, see assets/LICENSE-ASSETS.txt.

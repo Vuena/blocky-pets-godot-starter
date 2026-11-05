@@ -82,7 +82,7 @@ godot --headless --fixed-fps 60 --path . --script res://tools/smoke_test.gd
 
 ## Assets and licences
 
-- **Code**: MIT, see [LICENSE](LICENSE).
+- **Code** (`scripts/`, `scenes/`, `tools/`, `project.godot`): MIT, see [LICENSE](LICENSE).
 - **3D models, animations, textures** in `assets/`: **CC0 1.0 (public domain)**, see [assets/LICENSE-ASSETS.txt](assets/LICENSE-ASSETS.txt). Use them for anything, commercial included, no credit needed. They are the free samples from the packs below, nothing from the paid packs is included.
 
 **Honest note:** I (Vuena) made these assets myself with my own procedural Blender Python code, which I wrote with AI help. The meshes and textures are not AI-generated. This demo's code was also written with AI assistance and then tested by running it.
