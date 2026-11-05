@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" path="res://scripts/garden.gd" id="2_garden"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="3_player"]
+[ext_resource type="Script" path="res://scripts/camera_rig.gd" id="4_rig"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_main")
+
+[node name="Garden" type="Node3D" parent="."]
+script = ExtResource("2_garden")
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+
+[node name="Pets" type="Node3D" parent="."]
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("4_rig")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Info" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 12.0
+theme_override_colors/font_outline_color = Color(0.05, 0.1, 0.05, 0.9)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "Blocky Pets Godot Starter"

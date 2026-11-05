@@ -1,0 +1,9 @@
+# Godot 4
+.godot/
+*.translation
+export_presets.cfg
+.mono/
+data_*/
+
+# local recordings
+*.avi

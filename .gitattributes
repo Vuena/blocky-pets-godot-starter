@@ -1,0 +1,5 @@
+# Normalise line endings to LF; keep models and images untouched.
+* text=auto eol=lf
+*.glb binary
+*.png binary
+*.gif binary
